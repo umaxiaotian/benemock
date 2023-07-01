@@ -1,0 +1,2 @@
+[target_hosts]
+host1 ansible_host=target-node-1 ansible_user=root ansible_password=password
