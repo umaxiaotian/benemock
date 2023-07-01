@@ -1,0 +1,4 @@
+- name: Copy configuration file
+  template:
+    src: config.j2
+    dest: /data/config.test

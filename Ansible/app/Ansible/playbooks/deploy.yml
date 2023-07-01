@@ -9,3 +9,9 @@
         content: |
           テストドキュメント
         mode: '0644'  # ファイルのパーミッションを指定します
+    - name: Include common role
+      include_role:
+        name: common
+      vars:
+        database_host: "localhost"
+        database_port: 5432
