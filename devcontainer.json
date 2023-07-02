@@ -1,7 +1,0 @@
-{
-    "dockerComposeFile": ["docker-compose.yml"],
-    "service": "AnsibleDeveloper",
-    "workspaceFolder": "/app",
-    "postCreateCommand": "docker-compose up -d",
-    "postStartCommand": "docker-compose build && docker-compose up -d"
-  }
