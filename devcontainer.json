@@ -2,5 +2,8 @@
     "dockerComposeFile": ["docker-compose.yml"],
     "service": "AnsibleDeveloper",
     "workspaceFolder": "/app",
-    "shutdownAction": "none"
+    "extensions": [
+      "ms-azuretools.vscode-docker"
+    ],
+    "postCreateCommand": "docker-compose up -d"
   }
