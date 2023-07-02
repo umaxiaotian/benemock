@@ -1,12 +1,12 @@
 {
   "name": "Docker Compose",
   "dockerComposeFile": "../docker-compose.yml",
-  "service": "app"
-//   "extensions": [
-//     "ms-vscode-remote.remote-containers"
-//   ],
-//   "settings": {
-//     "terminal.integrated.shell.linux": "/bin/bash"
-//   },
-//   "postCreateCommand": "docker-compose up --build"
+  "service": "app",
+  "extensions": [
+    "ms-vscode-remote.remote-containers"
+  ],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "postCreateCommand": "docker-compose up -d"
 }
