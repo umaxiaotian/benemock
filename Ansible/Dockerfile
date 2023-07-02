@@ -42,4 +42,4 @@ RUN pip3 install fastapi uvicorn
 COPY ./app /app 
 WORKDIR /app
 
-CMD ["uvicorn", "main:app", "--reload", "--host", "0.0.0.0", "--port", "80"]
+# CMD ["uvicorn", "main:app", "--reload", "--host", "0.0.0.0", "--port", "80"]

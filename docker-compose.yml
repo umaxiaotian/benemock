@@ -1,9 +1,8 @@
 version: "3"
 
 services:
-#Ansible発射台
-  ansible-api:
-    container_name: ansible-api
+  ansible:
+    container_name: ansible
     build:
       context: ./Ansible
       dockerfile: Dockerfile
