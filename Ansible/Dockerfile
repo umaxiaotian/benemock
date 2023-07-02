@@ -17,7 +17,7 @@ RUN dnf -y install \
     # bison \
     # tk-devel \
     # zip \
-    # wget \
+    wget \
     # tar \
     gcc \
     # zip \
@@ -26,12 +26,12 @@ RUN dnf -y install \
     openssl-devel \
     openssh-server \
     sshpass
-# RUN wget https://www.python.org/ftp/python/3.11.0/Python-3.11.0.tgz
-# RUN tar -xzf Python-3.11.0.tgz
-# RUN cd Python-3.11.0
-# RUN Python-3.11.0/configure
-# RUN make
-# RUN make install
+RUN wget https://www.python.org/ftp/python/3.11.0/Python-3.11.0.tgz
+RUN tar -xzf Python-3.11.0.tgz
+RUN cd Python-3.11.0
+RUN Python-3.11.0/configure
+RUN make
+RUN make install
 
 RUN dnf -y install python3-pip epel-release
 RUN pip3 install --upgrade setuptools
