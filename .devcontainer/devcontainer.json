@@ -1,7 +1,7 @@
 {
   "name": "Docker Compose",
-  "dockerComposeFile": "docker-compose.yml",
-  "service": "app",
+  // "dockerComposeFile": "docker-compose.yml",
+  // "service": "app",
   "extensions": [
     "ms-vscode-remote.remote-containers"
   ],
