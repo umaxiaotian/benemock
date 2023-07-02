@@ -13,15 +13,15 @@ services:
     build:
       context: ./Ansible
       dockerfile: Dockerfile
-    # ports:
-    #   - 80:80
+    ports:
+      - 80:80
     volumes:
       - ./Ansible/dir:/data
       - ./Ansible/app:/app
       - ./Ansible/ssh:/root/.ssh
     # command: sh -c "ssh-keyscan target-node-1 >> /root/.ssh/known_hosts"
     environment:
-      - ANSIBLE_CONFIG=/app/ansible.cfg
+      - ANSIBLE_CONFIG=/app/Ansible/ansible.cfg
       # - ./Ansible/profile:/etc/profile
     networks:
       - backend

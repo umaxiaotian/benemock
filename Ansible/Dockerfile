@@ -38,8 +38,8 @@ RUN pip3 install --upgrade setuptools
 RUN pip3 install -U pip
 # RUN pip3 --version
 RUN pip3 install ansible
-# RUN pip3 install fastapi uvicorn
-# COPY ./app /app 
-# WORKDIR /app
+RUN pip3 install fastapi uvicorn
+COPY ./app /app 
+WORKDIR /app
 
-# CMD ["uvicorn", "main:app", "--reload", "--host", "0.0.0.0", "--port", "80"]
+CMD ["uvicorn", "main:app", "--reload", "--host", "0.0.0.0", "--port", "80"]
