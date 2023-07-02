@@ -6,8 +6,8 @@ services:
     build:
       context: ./Ansible
       dockerfile: Dockerfile
-    ports:
-      - 80:80
+    # ports:
+    #   - 80:80
     volumes:
       - ./Ansible/dir:/data
       - ./Ansible/app:/app
