@@ -1,0 +1,49 @@
+version: "3"
+
+services:
+  ansible:
+    container_name: ansible
+    build:
+      context: ../Ansible
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+    volumes:
+      - ../Ansible/dir:/data
+      - ../Ansible/app:/app
+      - ../Ansible/ssh:/root/.ssh
+    environment:
+      - ANSIBLE_CONFIG=/app/Ansible/ansible.cfg
+      # - ../Ansible/profile:/etc/profile
+    networks:
+      - backend
+    tty: true
+    # command: ssh-keyscan target-node-1 >> ~/.ssh/known_hosts
+    
+#Ansibleターゲット
+  target:
+    container_name: target-node-1
+    build:
+      context: ../Target
+      dockerfile: Dockerfile
+    ports:
+      - 22:22
+    volumes:
+      - ../Target/dir:/data
+    networks:
+      - backend
+    tty: true
+
+networks:
+  # frontend:
+  #   driver: bridge
+  #   ipam:
+  #     driver: default
+  #     config:
+  #       - subnet: 192.168.10.0/24
+  backend:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.20.0/24
