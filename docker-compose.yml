@@ -26,8 +26,8 @@ services:
     build:
       context: ./Target
       dockerfile: Dockerfile
-    # ports:
-    #   - 22:22
+    ports:
+      - 22:22
     volumes:
       - ./Target/dir:/data
     networks:
