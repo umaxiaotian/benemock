@@ -18,11 +18,20 @@ app.add_middleware(
 class Command(BaseModel):
     cmd: str
 
+class Contents(BaseModel):
+    contents: str
+
 @app.get("/")
 def read_root():
     return {"Hello": "World"}
 
+#コマンドを実行するフック
 @app.post("/exec")
 async def exec(get_command:Command):
-    """トークン発行"""
     return cmd.exec(get_command.cmd)
+
+#コンテンツからPLAYBOOKを実行
+@app.post("/contents_add")
+async def exec(get_contents:Contents):
+    command = f"ansible-playbook ./Ansible/playbooks/deploy.yml -e 'contents={get_contents.contents}'"
+    return cmd.exec(command)

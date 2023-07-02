@@ -7,7 +7,7 @@
       ansible.builtin.copy:
         dest: /data/file.txt  # 作成するファイルのパスと名前を指定します
         content: |
-          テストドキュメント
+          {{contents}}
         mode: '0644'  # ファイルのパーミッションを指定します
     - name: Include common role
       include_role:
