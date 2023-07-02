@@ -30,6 +30,11 @@ docker-compose up -d
 ssh-keyscan target-node-1 >> /root/.ssh/known_hosts
 ```
 
+Github Codespace内では、下記のコマンドで行うことができます。
+```bash
+bash ssh_reload.sh
+```
+
 ### Ansible発射台サーバーに接続し、Playbookを動かす
 
 まず発射台であるansibleコンテナ内に入ってください。※devContainerの機能を使ってGUIから入ってもらってもいいです。その人は下記のコマンドはパスしてください。
