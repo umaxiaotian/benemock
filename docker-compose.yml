@@ -3,6 +3,13 @@ version: "3"
 services:
   ansible:
     container_name: ansible
+    depends_on:
+      - target
+    healthcheck:
+      test: ["CMD", "curl", "-f", "target-node-1:22"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
     build:
       context: ./Ansible
       dockerfile: Dockerfile
@@ -12,14 +19,17 @@ services:
       - ./Ansible/dir:/data
       - ./Ansible/app:/app
       - ./Ansible/ssh:/root/.ssh
+    # command: sh -c "ssh-keyscan target-node-1 >> /root/.ssh/known_hosts"
     environment:
-      - ANSIBLE_CONFIG=/app/Ansible/ansible.cfg
+      - ANSIBLE_CONFIG=/app/ansible.cfg
       # - ./Ansible/profile:/etc/profile
     networks:
       - backend
     tty: true
     working_dir: /app
-    # command: ssh-keyscan target-node-1 >> ~/.ssh/known_hosts
+    
+    # command: ssh-keyscan target-node-1 >> /root/.ssh/known_hosts
+
     
 #Ansibleターゲット
   target:

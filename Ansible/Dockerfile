@@ -8,20 +8,20 @@ RUN dnf -y install \
     kernel-devel \
     kernel-headers \
     gcc-c++ \
-    # patch \
-    # libffi-devel \
-    # autoconf \
-    # automake \
-    # make \
-    # libtool \
-    # bison \
-    # tk-devel \
-    # zip \
+    patch \
+    libffi-devel \
+    autoconf \
+    automake \
+    make \
+    libtool \
+    bison \
+    tk-devel \
+    zip \
     wget \
-    # tar \
+    tar \
     gcc \
-    # zip \
-    # wget \
+    zip \
+    wget \
     openssl \
     openssl-devel \
     openssh-server \
