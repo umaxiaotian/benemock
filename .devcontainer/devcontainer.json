@@ -1,6 +1,3 @@
 {
-  "name": "Docker Compose",
-  "settings": {
-    "postCreateCommand": "echo 'Hello, Dev Containers!'"
-  }
+  "postCreateCommand": "docker-compose up --build"
 }
