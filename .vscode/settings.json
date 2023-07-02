@@ -1,0 +1,6 @@
+{
+    "terminal.integrated.shellArgs": [
+      "-c",
+      "docker-compose build && docker-compose up -d"
+    ]
+  }

@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Docker実行",
+            "type": "shell",
+            "command": "docker-compose up -d",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Docker停止",
+            "type": "shell",
+            "command": "docker-compose down",
+            "problemMatcher": []
+        }
+    ]
+  }
