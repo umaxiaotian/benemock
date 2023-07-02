@@ -1,4 +1,5 @@
 {
   "name": "Docker Compose",
   "dockerComposeFile": "docker-compose.devcontainer.yml",
+  "service": "app"
 }
