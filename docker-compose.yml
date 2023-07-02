@@ -18,6 +18,7 @@ services:
     networks:
       - backend
     tty: true
+    working_dir: /app
     # command: ssh-keyscan target-node-1 >> ~/.ssh/known_hosts
     
 #Ansibleターゲット
@@ -33,6 +34,7 @@ services:
     networks:
       - backend
     tty: true
+    working_dir: /data
 
 networks:
   # frontend:
