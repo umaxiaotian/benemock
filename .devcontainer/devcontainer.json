@@ -1,5 +1,4 @@
 {
   "name": "Docker Compose",
-  "dockerComposeFile": "docker-compose.devcontainer.yml",
-  "service": "app"
+  "postCreateCommand": "docker-compose buid && docker-compose up -d"
 }
