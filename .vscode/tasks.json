@@ -16,6 +16,15 @@
             "type": "shell",
             "command": "docker-compose down",
             "problemMatcher": []
+        },
+        {
+            "label": "INIT BUILD",
+            "type": "shell",
+            "command": "docker-compose build && docker-compose up -d",
+            "group": {
+              "kind": "build",
+              "isDefault": true
+            }
         }
     ]
   }
