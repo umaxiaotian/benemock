@@ -1,6 +1,6 @@
 
 {
     "name": "target",
-    "dockerComposeFile": "../docker-compose.yml",
+    "dockerComposeFile": "../../docker-compose.yml",
     "service": "target"
 }
