@@ -1,0 +1,13 @@
+{
+    "name": "Ansible",
+    "dockerComposeFile": "../docker-compose.yml",
+    "services": [
+      "ansible",
+      "target"
+    ],
+    "extensions": [
+      "ms-azuretools.vscode-docker",
+      "ms-python.python"
+    ],
+    "postCreateCommand": "sleep 10"
+  }
