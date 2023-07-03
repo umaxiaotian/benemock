@@ -1,5 +1,6 @@
+
 {
-    "name": "Target",
+    "name": "Ansible",
     "dockerComposeFile": "../docker-compose.yml",
-    "service": "target"
-  }
+    "service": "ansible"
+}
