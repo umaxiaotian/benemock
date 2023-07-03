@@ -1,0 +1,6 @@
+
+{
+    "name": "services",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "services"
+}
